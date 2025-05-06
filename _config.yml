@@ -1,6 +1,6 @@
-title: "FIXME title"
-description: "FIXME, description"
-url: https://2stable.github.io/FAQ
+title: "2Stable Help Center"
+description: "FIXME"
+url: https://help.2stable.com
 
 plugins:
   - jekyll-feed
