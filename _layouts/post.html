@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article-content-container" itemscope itemtype="http://schema.org/BlogPosting">
     <head>
         <title>{{ page.title }}</title>
     </head>
@@ -19,18 +19,15 @@ layout: default
             {% endif %}
         </div>
 
-        <h1 class="post-title p-name" itemprop="name headline">
+        <h1 class="article-title" itemprop="name headline">
             {{ page.title | escape }}
         </h1>
-        <p class="post-meta">
-            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
-                {%- assign date_format = "%b %-d, %Y" -%}
-                {{ page.date | date: date_format }}
-            </time>
-        </p>
+        <time class="article-sub-title" datetime="{{ page.date | date_to_xmlschema }}">
+            {%- assign date_format = "%b %-d, %Y" -%}
+            {{ page.date | date: date_format }}
+        </time>
     </header>
 
     {{ content }}
-
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
