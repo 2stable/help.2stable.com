@@ -2,19 +2,21 @@
 layout: default
 ---
 
-<div class="home">
-  <head>
-      <title>{{ site.title }}</title>
-  </head>
-  {%- if site.apps.size > 0 -%}
-  <ul class="post-list">
-      {% for app in site.apps  %}
-      <li>
-          <a class="black-link post-link-layout" href="{{ app.url | relative_url }}">
-            {{ app.title | escape }}
-          </a>
-      </li>
-      {% endfor %}
-  </ul>
-  {%- endif -%}
-</div>
+<article class="app-content-container" itemscope itemtype="https://schema.org/ItemList">
+    <head>
+        <title>{{ site.title }}</title>
+    </head>
+    {%- if site.apps.size > 0 -%}
+    <div class="apps-list">
+        <ul >
+            {% for app in site.apps %}
+            <li>
+                <a class="black-link" href="{{ app.url | relative_url }}">
+                    {%- include app_brand.html logo=app.logo title=app.title -%}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {%- endif -%}
+</article>
