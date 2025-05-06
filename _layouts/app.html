@@ -13,7 +13,8 @@ layout: default
 
     <div class="app-content">
         <ul class="list">
-            {% for article in site.articles  %}
+            {% assign sorted_articles = site.articles | sort: "index" %}
+            {% for article in sorted_articles %}
                 {% if article.app == page.app and article.isHidden == false %}
                 <li class="list-element">
                     <a href="{{ article.url | relative_url }}">
