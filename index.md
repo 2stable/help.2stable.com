@@ -15,7 +15,7 @@ layout: default
                     <a class="black-link" href="{{ app.url | relative_url }}">
                         {%- include app_brand.html logo=app.logo title=app.title -%}
                     </a>
-                </li>
+                </li> 
                 {% endif %}
             {% endfor %}
         </ul>
