@@ -2,20 +2,21 @@
 layout: default
 ---
 
-<article class="article-content-container" itemscope itemtype="https://schema.org/ItemList">
+<article class="app-content-container" itemscope itemtype="https://schema.org/ItemList">
     <head>
         <title>{{ page.title }}</title>
     </head>
+
     <header>
         {%- include app_brand.html -%}
     </header>
 
-    <div class="article-content">
-        <ul>
+    <div class="app-content">
+        <ul class="list">
             {% for article in site.articles  %}
                 {% if article.app == page.app and article.isHidden == false %}
-                <li>
-                    <a class="black-link post-link-layout" href="{{ article.url | relative_url }}">
+                <li class="list-element">
+                    <a href="{{ article.url | relative_url }}">
                     {{ article.title | escape }}
                     </a>
                 </li>

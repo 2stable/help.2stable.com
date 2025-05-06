@@ -48,15 +48,6 @@ a img {
   }
 }
 
-a {
-  color: #2a7ae2;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .black-link {
   color: #111;
   text-decoration: none;

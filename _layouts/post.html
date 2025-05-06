@@ -6,8 +6,8 @@ layout: default
     <head>
         <title>{{ page.title }}</title>
     </head>
-    <header class="post-header">
-        <div class="post-back">
+    <header>
+        <div>
             {% if page.app %}
             <a class="black-link" href="{{ '/' | append: page.app | append: '/' | relative_url }}">
                 ← {{ site.moving.back_to }}
