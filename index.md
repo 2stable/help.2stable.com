@@ -6,12 +6,12 @@ layout: default
   <head>
       <title>{{ site.title }}</title>
   </head>
-  {%- if site.articles.size > 0 -%}
+  {%- if site.apps.size > 0 -%}
   <ul class="post-list">
-      {% for article in site.articles  %}
+      {% for app in site.apps  %}
       <li>
-          <a class="black-link post-link-layout" href="{{ article.url | relative_url }}">
-            {{ article.title | escape }}
+          <a class="black-link post-link-layout" href="{{ app.url | relative_url }}">
+            {{ app.title | escape }}
           </a>
       </li>
       {% endfor %}

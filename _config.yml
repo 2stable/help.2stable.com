@@ -14,3 +14,7 @@ collections:
   articles:
     output: true
     permalink: /en/articles/:name
+
+  apps:
+    output: true
+    permalink: /:name
