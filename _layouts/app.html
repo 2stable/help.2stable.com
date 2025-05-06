@@ -12,7 +12,8 @@ layout: default
 
     <div class="article-content">
         <ul>
-            {% for article in site.articles  %}
+            {% assign sorted_articles = site.articles | sort: "index" %}
+            {% for article in sorted_articles %}
                 {% if article.app == page.app and article.isHidden == false %}
                 <li>
                     <a class="black-link post-link-layout" href="{{ article.url | relative_url }}">
