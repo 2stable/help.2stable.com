@@ -3,6 +3,7 @@ layout: default
 ---
 
 <article class="article-content-container" itemscope itemtype="http://schema.org/BlogPosting">
+
     <head>
         <title>{{ page.title }}</title>
     </head>
@@ -30,6 +31,11 @@ layout: default
 
     <div class="article-content">
         {{ content }}
+        {% for app in site.apps %}
+        {% if app.app == page.app %}
+        {%- include contact-us.html prefix=app.contact_prefix title=page.title -%}
+        {% endif %}
+        {% endfor %}
     </div>
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
