@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 30px;
 }
 
 .app-brand .app-brand-text {
@@ -22,4 +23,23 @@
     line-height: 0;
     padding: 0;
     margin: 0;
+}
+
+.app-content-container .list {
+    padding: 0 16px;
+}
+
+.app-content-container .list a {
+    color: var(--blue-shade40);
+    text-decoration: none;
+}
+
+.app-content-container .list a:hover {
+    text-decoration: underline;
+}
+
+.app-content-container .list-element {
+    font-size: 18px;
+    padding-bottom: 13px;
+    line-height: 28px;
 }
