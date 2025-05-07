@@ -18,8 +18,11 @@ layout: default
                 {% if article.app == page.app and article.isHidden == false %}
                 <li class="list-element">
                     <a href="{{ article.url | relative_url }}">
-                    {{ article.title | escape }}
+                      <h3>{{ article.title }}</h3>
                     </a>
+                    <p>
+                      {{ article.content | strip_html | truncate: 150 }}
+                    </p>
                 </li>
                 {% endif %}
             {% endfor %}
