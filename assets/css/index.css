@@ -178,22 +178,28 @@ a img {
 .app-content-container .list-element-link {
     color: var(--blue-shade40);
     text-decoration: none;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.app-content-container .list-element {
+.app-content-container .list-element-container {
     font-size: 17px;
     line-height: 25px;
     background-color: var(--article-bg-color);
-    margin: 0 0 16px 0;
     padding: 16px;
     cursor: pointer;
     border-radius: 15px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.app-content-container .list-element-link:hover .list-element {
+.app-content-container .list-element {
+    margin: 0 0 16px 0;
+}
+
+.app-content-container .list-element-link:hover .list-element-container {
     background: var(--article-hover-bg-color);
 }
 

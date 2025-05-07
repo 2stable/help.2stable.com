@@ -16,9 +16,9 @@ layout: default
             {% assign sorted_articles = site.articles | sort: "index" %}
             {% for article in sorted_articles %}
             {% if article.app == page.app and article.isHidden == false %}
-            <li>
+            <li class="list-element">
                 <a class="list-element-link" href="{{ article.url | relative_url }}">
-                    <div class="list-element">
+                    <div class="list-element-container">
                         <h3 class="list-title">{{ article.title }}</h3>
                         <p class="list-subtitle">
                             {{ article.content | strip_html | truncate: 150 }}
