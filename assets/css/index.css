@@ -172,22 +172,29 @@ a img {
 /* MARK: App + Apps */
 
 .app-content-container .list {
-    padding: 0 16px;
+    list-style: none;
 }
 
-.app-content-container .list a {
+.app-content-container .list-element-link {
     color: var(--blue-shade40);
     text-decoration: none;
 }
 
-.app-content-container .list a:hover {
-    text-decoration: underline;
-}
-
 .app-content-container .list-element {
     font-size: 17px;
-    padding-bottom: 13px;
     line-height: 25px;
+    background-color: var(--article-bg-color);
+    margin: 0 0 16px 0;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.app-content-container .list-element-link:hover .list-element {
+    background: var(--article-hover-bg-color);
 }
 
 .app-content-container .apps-list {
@@ -198,6 +205,18 @@ a img {
 
 .app-content-container .apps-list ul {
     list-style: none;
+}
+
+.app-content-container .list-subtitle {
+    color: var(--secondary-text-color);
+    font-size: 15px;
+    line-height: 22px;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+.app-content-container .list-element-link:hover .list-title {
+    text-decoration: underline;
 }
 
 /* MARK: App Brand */
