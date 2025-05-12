@@ -1,11 +1,12 @@
 title: "2Stable Help Center"
-description: "FIXME"
+description: "Looking for help with 2Stable apps? Our official support center offers step-by-step guides, troubleshooting tips, and frequently asked questions for the Passwords App, Authenticator App, Passkeys App and other 2Stable products. Learn how to set up, secure, and sync your data across devices with ease. Find answers fast or contact our support team anytime."
 url: https://help.2stable.com
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 exclude:
   - package.json
